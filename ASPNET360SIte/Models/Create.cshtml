@@ -1,0 +1,76 @@
+﻿@page
+@model ASPNET360SIte.Models.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Property</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data"> 
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Property.Build" class="control-label"></label>
+                <input asp-for="Property.Build" class="form-control" />
+                <span asp-validation-for="Property.Build" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Street" class="control-label"></label>
+                <input asp-for="Property.Street" class="form-control" />
+                <span asp-validation-for="Property.Street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Locality" class="control-label"></label>
+                <input asp-for="Property.Locality" class="form-control" />
+                <span asp-validation-for="Property.Locality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Town" class="control-label"></label>
+                <input asp-for="Property.Town" class="form-control" />
+                <span asp-validation-for="Property.Town" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.County" class="control-label"></label>
+                <input asp-for="Property.County" class="form-control" />
+                <span asp-validation-for="Property.County" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.Country" class="control-label"></label>
+                <input asp-for="Property.Country" class="form-control" />
+                <span asp-validation-for="Property.Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.PostCode" class="control-label"></label>
+                <input asp-for="Property.PostCode" class="form-control" />
+                <span asp-validation-for="Property.PostCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.MainImagePath" class="control-label"></label>
+                <input asp-for="Property.MainImagePath" class="form-control" />
+                <span asp-validation-for="Property.MainImagePath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Property.MainImage" class="control-label"></label>
+                <input asp-for="Property.MainImage" class="form-control" type="file" accept="image/*" />
+                <span asp-validation-for="Property.MainImage" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
