@@ -1,0 +1,80 @@
+﻿@page
+@model ASPNET360SIte.Pages.Properties.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Build)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Locality)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Town)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].County)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].Country)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].PostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property[0].MainImagePath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Property)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Build)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Street)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Locality)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Town)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.County)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MainImagePath)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

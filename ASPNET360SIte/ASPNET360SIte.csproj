@@ -15,7 +15,6 @@
     <Folder Include="Areas\Identity\Services\" />
     <Folder Include="Pages\FloorPlans\" />
     <Folder Include="Pages\Rooms\" />
-    <Folder Include="Pages\Properties\" />
     <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
 

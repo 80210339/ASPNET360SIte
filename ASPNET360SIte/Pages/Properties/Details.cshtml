@@ -1,0 +1,72 @@
+﻿@page
+@model ASPNET360SIte.Pages.Properties.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Build)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Build)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Street)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Street)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Locality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Locality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Town)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Town)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.County)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.County)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Country)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.Country)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.PostCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Property.PostCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.MainImagePath)
+        </dt>
+        <dd>
+            @if (Model.Property.MainImagePath != null)
+            {
+
+                <img src="/uploads/@Model.Property.MainImagePath" />
+            }
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Property.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
