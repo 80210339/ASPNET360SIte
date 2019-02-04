@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ASPNET360SIte.Models.IdentityCustomisationTest.Models;
+using ASPNET360SIte.Models;
 
 namespace ASPNET360SIte.Models
 {
@@ -15,5 +16,9 @@ namespace ASPNET360SIte.Models
         }
 
         public DbSet<ASPNET360SIte.Models.IdentityCustomisationTest.Models.Property> Property { get; set; }
+
+        public DbSet<ASPNET360SIte.Models.FloorPlan> FloorPlan { get; set; }
+
+        public DbSet<ASPNET360SIte.Models.Room> Room { get; set; }
     }
 }
