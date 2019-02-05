@@ -19,6 +19,10 @@ namespace ASPNET360SIte.Models
         [NotMappedAttribute]
         public IFormFile MainImage { get; set; }
 
-        public ICollection<Room> Room { get; set; }
+        public int RoomID { get; set; }
+        public Room Room { get; set; }
+        public ICollection<Property> Property { get; set; }
+
+
     }
 }

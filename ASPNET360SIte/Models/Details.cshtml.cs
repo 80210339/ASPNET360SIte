@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ASPNET360SIte.Models.IdentityCustomisationTest.Models;
+
 
 namespace ASPNET360SIte.Models
 {
@@ -18,7 +18,7 @@ namespace ASPNET360SIte.Models
             _context = context;
         }
 
-        public Property Property { get; set; }
+        public ASPNET360SIte.Models.Property Property { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

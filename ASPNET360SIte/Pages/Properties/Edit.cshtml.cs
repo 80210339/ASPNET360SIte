@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ASPNET360SIte.Models;
-using ASPNET360SIte.Models.IdentityCustomisationTest.Models;
+//using ASPNET360SIte.Models.IdentityCustomisationTest.Models;
 
 namespace ASPNET360SIte.Pages.Properties
 {

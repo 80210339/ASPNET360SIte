@@ -1,20 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace ASPNET360SIte.Models
 {
-    using Microsoft.AspNetCore.Http;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
-    using System.Threading.Tasks;
-
-    namespace IdentityCustomisationTest.Models
-    {
         public class Property
         {
             public int ID { get; set; }
@@ -34,9 +27,10 @@ namespace ASPNET360SIte.Models
             [NotMappedAttribute]
             public IFormFile MainImage { get; set; }
 
-            public ICollection<FloorPlan> FloorPlan { get; set; }
+            //public int FloorPlanID { get; set; }
+            //public FloorPlan FloorPlan { get; set; }
+
 
         }
-    }
 
 }

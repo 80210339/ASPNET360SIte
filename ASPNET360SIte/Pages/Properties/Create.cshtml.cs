@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ASPNET360SIte.Models;
-using ASPNET360SIte.Models.IdentityCustomisationTest.Models;
 using System.IO;
 
 namespace ASPNET360SIte.Pages.Properties
@@ -26,7 +25,7 @@ namespace ASPNET360SIte.Pages.Properties
         }
 
         [BindProperty]
-        public Property Property { get; set; }
+        public ASPNET360SIte.Models.Property Property { get; set; }
 
         public async Task<IActionResult> OnPostAsync()
         {

@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ASPNET360SIte.Models;
-using ASPNET360SIte.Models.IdentityCustomisationTest.Models;
 
 namespace ASPNET360SIte.Pages.Properties
 {
@@ -19,7 +18,7 @@ namespace ASPNET360SIte.Pages.Properties
             _context = context;
         }
 
-        public Property Property { get; set; }
+        public ASPNET360SIte.Models.Property Property { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -29,6 +28,12 @@ namespace ASPNET360SIte.Pages.Properties
             }
 
             Property = await _context.Property.FirstOrDefaultAsync(m => m.ID == id);
+
+ //           Property = await _context.Property
+ //       .Include(s => s.FloorPlan)
+ //           .ThenInclude(e => e.Room)
+ //       .AsNoTracking()
+ //       .FirstOrDefaultAsync(m => m.ID == id);
 
             if (Property == null)
             {
