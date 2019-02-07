@@ -27,8 +27,8 @@ namespace ASPNET360SIte.Models
             [NotMappedAttribute]
             public IFormFile MainImage { get; set; }
 
-            //public int FloorPlanID { get; set; }
-            //public FloorPlan FloorPlan { get; set; }
+           // public int FloorPlanID { get; set; }
+          //public FloorPlan FloorPlan { get; set; }
 
 
         }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPNET360SIte.Migrations
 {
     [DbContext(typeof(ASPNET360SIteContext))]
-    [Migration("20190204110035_RemovedDatabaseTriggersForFloorplansAndRooms")]
-    partial class RemovedDatabaseTriggersForFloorplansAndRooms
+    [Migration("20190206004927_AddRoomClassToFloorplan")]
+    partial class AddRoomClassToFloorplan
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,16 +31,16 @@ namespace ASPNET360SIte.Migrations
 
                     b.Property<string>("MainImagePath");
 
-                    b.Property<int?>("PropertyID");
+                    b.Property<int?>("RoomID");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("PropertyID");
+                    b.HasIndex("RoomID");
 
                     b.ToTable("FloorPlan");
                 });
 
-            modelBuilder.Entity("ASPNET360SIte.Models.IdentityCustomisationTest.Models.Property", b =>
+            modelBuilder.Entity("ASPNET360SIte.Models.Property", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -74,31 +74,20 @@ namespace ASPNET360SIte.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("FloorPlanID");
-
                     b.Property<string>("MainImagePath");
 
                     b.Property<string>("RoomLabel");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("FloorPlanID");
-
                     b.ToTable("Room");
                 });
 
             modelBuilder.Entity("ASPNET360SIte.Models.FloorPlan", b =>
                 {
-                    b.HasOne("ASPNET360SIte.Models.IdentityCustomisationTest.Models.Property")
-                        .WithMany("FloorPlan")
-                        .HasForeignKey("PropertyID");
-                });
-
-            modelBuilder.Entity("ASPNET360SIte.Models.Room", b =>
-                {
-                    b.HasOne("ASPNET360SIte.Models.FloorPlan")
-                        .WithMany("Room")
-                        .HasForeignKey("FloorPlanID");
+                    b.HasOne("ASPNET360SIte.Models.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomID");
                 });
 #pragma warning restore 612, 618
         }

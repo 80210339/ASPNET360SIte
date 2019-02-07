@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASPNET360SIte.Migrations
 {
     [DbContext(typeof(ASPNET360SIteContext))]
-    [Migration("20190205233125_ADDPKFPAssociations")]
-    partial class ADDPKFPAssociations
+    [Migration("20190206003515_AddFloorPlanIDToRoomModel")]
+    partial class AddFloorPlanIDToRoomModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

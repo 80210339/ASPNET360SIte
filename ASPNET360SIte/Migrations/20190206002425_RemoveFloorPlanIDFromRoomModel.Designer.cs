@@ -3,14 +3,16 @@ using ASPNET360SIte.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ASPNET360SIte.Migrations
 {
     [DbContext(typeof(ASPNET360SIteContext))]
-    partial class ASPNET360SIteContextModelSnapshot : ModelSnapshot
+    [Migration("20190206002425_RemoveFloorPlanIDFromRoomModel")]
+    partial class RemoveFloorPlanIDFromRoomModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,13 +26,15 @@ namespace ASPNET360SIte.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CustomPropertyID");
-
                     b.Property<string>("FloorPlanLabel");
 
                     b.Property<string>("MainImagePath");
 
+                    b.Property<int>("RoomID");
+
                     b.HasKey("ID");
+
+                    b.HasIndex("RoomID");
 
                     b.ToTable("FloorPlan");
                 });
@@ -47,6 +51,8 @@ namespace ASPNET360SIte.Migrations
 
                     b.Property<string>("County");
 
+                    b.Property<int>("FloorPlanID");
+
                     b.Property<string>("Locality");
 
                     b.Property<string>("MainImagePath");
@@ -60,6 +66,8 @@ namespace ASPNET360SIte.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("FloorPlanID");
+
                     b.ToTable("Property");
                 });
 
@@ -69,8 +77,6 @@ namespace ASPNET360SIte.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CustomFloorPlanID");
-
                     b.Property<string>("MainImagePath");
 
                     b.Property<string>("RoomLabel");
@@ -78,6 +84,22 @@ namespace ASPNET360SIte.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Room");
+                });
+
+            modelBuilder.Entity("ASPNET360SIte.Models.FloorPlan", b =>
+                {
+                    b.HasOne("ASPNET360SIte.Models.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ASPNET360SIte.Models.Property", b =>
+                {
+                    b.HasOne("ASPNET360SIte.Models.FloorPlan", "FloorPlan")
+                        .WithMany("Property")
+                        .HasForeignKey("FloorPlanID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

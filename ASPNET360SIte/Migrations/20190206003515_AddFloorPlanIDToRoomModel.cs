@@ -2,7 +2,7 @@
 
 namespace ASPNET360SIte.Migrations
 {
-    public partial class ScaffoldedPropertyModel : Migration
+    public partial class AddFloorPlanIDToRoomModel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
