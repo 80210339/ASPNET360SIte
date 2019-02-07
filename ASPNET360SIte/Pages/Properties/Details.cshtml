@@ -66,6 +66,28 @@
         </dd>
         <dd></dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.FloorPlan)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Floorplan</th>
+                    <th>Image</th>
+                </tr>
+                @foreach (var item in Model.Property.FloorPlan)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Floorplan.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MainImagePath)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
 
 
     </dl>

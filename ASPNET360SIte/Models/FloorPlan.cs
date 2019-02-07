@@ -21,6 +21,8 @@ namespace ASPNET360SIte.Models
 
         public int CustomPropertyID { get; set; }
 
+        public Room Room { get; set; }
+
         // public int RoomID { get; set; }
         //public ICollection<Property> Property { get; set; }
 
