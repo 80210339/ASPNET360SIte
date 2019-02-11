@@ -21,7 +21,7 @@ namespace ASPNET360SIte.Models
 
         public int CustomPropertyID { get; set; }
 
-        public Room Room { get; set; }
+        //public Room Room { get; set; }        --included as required for the foreach code in Properties/detail page
 
         // public int RoomID { get; set; }
         //public ICollection<Property> Property { get; set; }

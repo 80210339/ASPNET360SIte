@@ -28,13 +28,14 @@ namespace ASPNET360SIte.Pages.Properties
             }
 
             /*Property = await _context.Property.FirstOrDefaultAsync(m => m.ID == id);*/
+            Property = await _context.Property.FirstOrDefaultAsync(m => m.ID == id);
 
-            Property = await _context.Property
-        .Include(s => s.FloorPlan)
-            .ThenInclude(e => e.Room)
-        .AsNoTracking()
-        .FirstOrDefaultAsync(m => m.ID == id);
-
+            /*            Property = await _context.Property
+                    .Include(s => s.FloorPlan)
+                        .ThenInclude(e => e.Room)
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(m => m.ID == id);
+            */
             if (Property == null)
             {
                 return NotFound();

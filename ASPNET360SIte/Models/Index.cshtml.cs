@@ -22,6 +22,11 @@ namespace ASPNET360SIte.Models
         public async Task OnGetAsync()
         {
             Property = await _context.Property.ToListAsync();
+
+            foreach (var x in Property)
+            {
+                x.CustomAgentID = User.Identity.Name;
+            }
         }
     }
 }

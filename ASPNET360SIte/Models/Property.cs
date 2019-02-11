@@ -24,13 +24,15 @@ namespace ASPNET360SIte.Models
             [Display(Name = "Property Image")]
             public string MainImagePath { get; set; }
 
+            public string CustomAgentID { get; set; }
+
             [NotMappedAttribute]
             public IFormFile MainImage { get; set; }
 
-           // public int FloorPlanID { get; set; }
-          public FloorPlan FloorPlan { get; set; }
+        // public int FloorPlanID { get; set; }
+        //public FloorPlan FloorPlan { get; set; }      --included as required for the foreach code in Properties/detail page
 
 
-        }
+    }
 
 }

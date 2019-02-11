@@ -61,6 +61,8 @@ namespace ASPNET360SIte.Models
                 Property.MainImagePath = Property.MainImage.FileName;
             }
 
+            //Property.CustomAgentID = User.Identity.GetUserId();
+
             _context.Property.Add(Property);
             await _context.SaveChangesAsync();
 

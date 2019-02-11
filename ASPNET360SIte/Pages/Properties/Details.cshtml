@@ -65,7 +65,9 @@
             }
         </dd>
         <dd></dd>
-
+@*  This segment of code is error out with....
+    Foreach statement cannot operate on variables of type 'object' Floorplan because Floorplan 'object' does not contain a public definition for 'GetEnumerator'
+    Have also  commneted out the Floorplan and Room types used in the Property and Florplan classes
         <dt>
             @Html.DisplayNameFor(model => model.Property.FloorPlan)
         </dt>
@@ -88,8 +90,7 @@
                 }
             </table>
         </dd>
-
-
+*@
     </dl>
 </div>
 <div>
