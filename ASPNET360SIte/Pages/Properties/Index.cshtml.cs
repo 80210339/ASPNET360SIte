@@ -22,7 +22,8 @@ namespace ASPNET360SIte.Pages.Properties
 
         public async Task OnGetAsync()
         {
-            Property = await _context.Property.Where(x => x.CustomAgentID == User.Identity.Name).ToListAsync();
+            //Property = await _context.Property.Where(x => x.CustomAgentID == User.Identity.Name).ToListAsync();
+            Property = await _context.Property.ToListAsync();
         }
     }
 }

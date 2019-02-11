@@ -62,6 +62,11 @@ namespace ASPNET360SIte.Models
             }
 
             //Property.CustomAgentID = User.Identity.GetUserId();
+            //Property.CustomAgentID = @UserManager.GetUserName(User);
+            Property.CustomAgentID = "xxx"; //User.Identity.Name;
+            
+
+
 
             _context.Property.Add(Property);
             await _context.SaveChangesAsync();

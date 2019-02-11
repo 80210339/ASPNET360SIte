@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -22,11 +23,13 @@ namespace ASPNET360SIte.Models
         public async Task OnGetAsync()
         {
             Property = await _context.Property.ToListAsync();
-
+/*
             foreach (var x in Property)
             {
-                x.CustomAgentID = User.Identity.Name;
+                x.CustomAgentID = "xxx"; //User.Identity.Name;
+               //x.CustomAgentID = @UserManager.GetUserName(User);
             }
+            */
         }
     }
 }
