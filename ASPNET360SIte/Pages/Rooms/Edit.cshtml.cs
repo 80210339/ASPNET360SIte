@@ -6,15 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ASPNET360SIte.Models;
+using ASPNET360SIte.Models; 
+using ASPNET360SIte.Data;
 
 namespace ASPNET360SIte.Pages.Rooms
 {
     public class EditModel : PageModel
     {
-        private readonly ASPNET360SIte.Models.ASPNET360SIteContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public EditModel(ASPNET360SIte.Models.ASPNET360SIteContext context)
+        public EditModel(ApplicationDbContext context)
         {
             _context = context;
         }

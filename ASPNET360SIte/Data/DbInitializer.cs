@@ -1,4 +1,4 @@
-﻿using ASPNET360SIte.Models;
+﻿using ASPNET360SIte.Models; using ASPNET360SIte.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace ASPNET360SIte.Data
 {
     public class DbInitializer
     {
-        public static void Initialize(ASPNET360SIteContext context)
+        public static void Initialize(ApplicationDbContext context)
         {
             // context.Database.EnsureCreated();
 

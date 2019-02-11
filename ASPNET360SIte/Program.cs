@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using ASPNET360SIte.Data;
-using ASPNET360SIte.Models;
+using ASPNET360SIte.Models; 
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -25,7 +25,7 @@ namespace ASPNET360SIte
 
                 try
                 {
-                    var context = services.GetRequiredService<ASPNET360SIteContext>();
+                    var context = services.GetRequiredService<ApplicationDbContext>();
                     // using ContosoUniversity.Data; 
                     DbInitializer.Initialize(context);
                 }

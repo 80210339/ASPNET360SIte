@@ -44,13 +44,7 @@ namespace ASPNET360SIte
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            services.AddDbContext<PortalContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("PortalContext")));
-
-            services.AddDbContext<ASPNET360SIteContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ASPNET360SIteContext")));
-        }
+                    }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

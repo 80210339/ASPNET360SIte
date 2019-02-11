@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ASPNET360SIte.Models;
+using ASPNET360SIte.Models; using ASPNET360SIte.Data;
 
 namespace ASPNET360SIte.Pages.Properties
 {
     public class IndexModel : PageModel
     {
-        private readonly ASPNET360SIte.Models.ASPNET360SIteContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public IndexModel(ASPNET360SIte.Models.ASPNET360SIteContext context)
+        public IndexModel(ApplicationDbContext context)
         {
             _context = context;
         }

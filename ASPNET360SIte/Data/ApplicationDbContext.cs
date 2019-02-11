@@ -13,5 +13,11 @@ namespace ASPNET360SIte.Data
             : base(options)
         {
         }
+
+        public DbSet<ASPNET360SIte.Models.Property> Property { get; set; }
+
+        public DbSet<ASPNET360SIte.Models.FloorPlan> FloorPlan { get; set; }
+
+        public DbSet<ASPNET360SIte.Models.Room> Room { get; set; }
     }
 }
