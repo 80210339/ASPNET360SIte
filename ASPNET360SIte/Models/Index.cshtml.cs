@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ASPNET360SIte.Models; using ASPNET360SIte.Data;
 
-namespace ASPNET360SIte.Pages.Properties
+namespace ASPNET360SIte.Models
 {
     public class IndexModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ASPNET360SIte.Models.ASPNET360SIteContext _context;
 
-        public IndexModel(ApplicationDbContext context)
+        public IndexModel(ASPNET360SIte.Models.ASPNET360SIteContext context)
         {
             _context = context;
         }
@@ -22,8 +22,14 @@ namespace ASPNET360SIte.Pages.Properties
 
         public async Task OnGetAsync()
         {
-            //Property = await _context.Property.Where(x => x.CustomAgentID == User.Identity.Name).ToListAsync();
             Property = await _context.Property.ToListAsync();
+/*
+            foreach (var x in Property)
+            {
+                x.CustomAgentID = "xxx"; //User.Identity.Name;
+               //x.CustomAgentID = @UserManager.GetUserName(User);
+            }
+            */
         }
     }
 }
