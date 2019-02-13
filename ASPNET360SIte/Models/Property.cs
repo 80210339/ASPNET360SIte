@@ -30,7 +30,7 @@ namespace ASPNET360SIte.Models
             public IFormFile MainImage { get; set; }
 
         // public int FloorPlanID { get; set; }
-        //public FloorPlan FloorPlan { get; set; }      --included as required for the foreach code in Properties/detail page
+        //public FloorPlan FloorPlan { get; set; }      //included as required for the foreach code in Properties/detail page
 
 
     }

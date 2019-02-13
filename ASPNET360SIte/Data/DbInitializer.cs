@@ -20,9 +20,9 @@ namespace ASPNET360SIte.Data
 
             var properties = new Property[]
             {
-            new Property{Build="11",Street="The Roperies",Locality="Hatters Lane",Town="High Wycombe",County="Buckinghamshire",PostCode="HP13 7FW",Country="Great Britain"},
+            new Property{Build="11",Street="The Roperies",Locality="Hatters Lane",Town="High Wycombe",County="Buckinghamshire",PostCode="HP13 7FW",Country="Great Britain",MainImagePath="Front-Of-The-House-Image.png"},
 
-            new Property{Build="5",Street="Radcliffe Road",Locality="Lupset",Town="Wakefield",County="West Yorkshire",PostCode="WF2 8RS",Country="Great Britain"},
+            new Property{Build="5",Street="Radcliffe Road",Locality="Lupset",Town="Wakefield",County="West Yorkshire",PostCode="WF2 8RS",Country="Great Britain",MainImagePath="Front-Of-The-House-Image.png"},
 			/*
             new Property{Build="80",Street="Cressex Road",Locality="Cressex",Town="High Wycombe",County="Buckinghamshire",PostCode="HP12 4TU",Country="Great Britain"},
             new Property{Build="15",Street="Denmark Street",Locality="Fenny Strafford",Town="Bletchley",County="Buckinghamshire",PostCode="MK2 2NH",Country="Great Britain"},
@@ -41,12 +41,12 @@ namespace ASPNET360SIte.Data
 
             var floorPlans = new FloorPlan[]
              {
-            new FloorPlan{FloorPlanLabel="Ground Floor",MainImagePath="",CustomPropertyID=1},
-            new FloorPlan{FloorPlanLabel="First Floor",MainImagePath="",CustomPropertyID=1},
-            new FloorPlan{FloorPlanLabel="Second Floor",MainImagePath="",CustomPropertyID=1},
+            new FloorPlan{FloorPlanLabel="Ground Floor",MainImagePath="Ground-Floor-Floor-Plan.png",CustomPropertyID=1},
+            new FloorPlan{FloorPlanLabel="First Floor",MainImagePath="First-Floor-Floor-Plan.png",CustomPropertyID=1},
+            new FloorPlan{FloorPlanLabel="Second Floor",MainImagePath="Second-Floor-Floor-Plan.png",CustomPropertyID=1},
 
-            new FloorPlan{FloorPlanLabel="Ground Floor",MainImagePath="",CustomPropertyID=2},
-            new FloorPlan{FloorPlanLabel="First Floor",MainImagePath="",CustomPropertyID=2},
+            new FloorPlan{FloorPlanLabel="Ground Floor",MainImagePath="Ground-Floor-Floor-Plan.png",CustomPropertyID=2},
+            new FloorPlan{FloorPlanLabel="First Floor",MainImagePath="First-Floor-Floor-Plan.png",CustomPropertyID=2},
                  /*
                  new FloorPlan{FloorPlanLabel="Ground Floor",MainImagePath="",CustomPropertyID=3},
                  new FloorPlan{FloorPlanLabel="First Floor",MainImagePath="",CustomPropertyID=3},
@@ -68,31 +68,31 @@ namespace ASPNET360SIte.Data
 
             var rooms = new Room[]
             {
-            new Room{RoomLabel="Hallway",MainImagePath="",CustomFloorPlanID=1},
-            new Room{RoomLabel="Living Room",MainImagePath="",CustomFloorPlanID=1},
-            new Room{RoomLabel="Dinning Room",MainImagePath="",CustomFloorPlanID=1},
-            new Room{RoomLabel="Kitchen",MainImagePath="",CustomFloorPlanID=1},
+            new Room{RoomLabel="Hallway",MainImagePath="Ground-Floor-Room-One-Image.png",CustomFloorPlanID=1},
+            new Room{RoomLabel="Living Room",MainImagePath="Ground-Floor-Room-Two-Image.png",CustomFloorPlanID=1},
+            new Room{RoomLabel="Dinning Room",MainImagePath="Ground-Floor-Room-Three-Image.png",CustomFloorPlanID=1},
+            new Room{RoomLabel="Kitchen",MainImagePath="Ground-Floor-Room-Four-Image.png",CustomFloorPlanID=1},
             new Room{RoomLabel="Ground Floor Toilet",MainImagePath="",CustomFloorPlanID=1},
             new Room{RoomLabel="Garden",MainImagePath="",CustomFloorPlanID=1},
-            new Room{RoomLabel="First Floor Master Bedroom (1) ",MainImagePath="",CustomFloorPlanID=2},
-            new Room{RoomLabel="On Suite Bathroom",MainImagePath="",CustomFloorPlanID=2},
-            new Room{RoomLabel="First Floor Bedroom (2)",MainImagePath="",CustomFloorPlanID=2},
-            new Room{RoomLabel="First Floor Hallway",MainImagePath="",CustomFloorPlanID=2},
-            new Room{RoomLabel="Second Floor Bedroom (1)",MainImagePath="",CustomFloorPlanID=3},
-            new Room{RoomLabel="Second Floor Bedroom (2)",MainImagePath="",CustomFloorPlanID=3},
-            new Room{RoomLabel="Second Floor Bathroom",MainImagePath="",CustomFloorPlanID=3},
-            new Room{RoomLabel="Second Floor Hallway",MainImagePath="",CustomFloorPlanID=3},
+            new Room{RoomLabel="First Floor Master Bedroom (1) ",MainImagePath="First-Floor-Room-One-Image.png",CustomFloorPlanID=2},
+            new Room{RoomLabel="On Suite Bathroom",MainImagePath="First-Floor-Room-Two-Image.png",CustomFloorPlanID=2},
+            new Room{RoomLabel="First Floor Bedroom (2)",MainImagePath="First-Floor-Room-Three-Image.png",CustomFloorPlanID=2},
+            new Room{RoomLabel="First Floor Hallway",MainImagePath="First-Floor-Room-Four-Image.png",CustomFloorPlanID=2},
+            new Room{RoomLabel="Second Floor Bedroom (1)",MainImagePath="Second-Floor-Room-One-Image.png",CustomFloorPlanID=3},
+            new Room{RoomLabel="Second Floor Bedroom (2)",MainImagePath="Second-Floor-Room-Two-Image.png",CustomFloorPlanID=3},
+            new Room{RoomLabel="Second Floor Bathroom",MainImagePath="Second-Floor-Room-Three-Image.png",CustomFloorPlanID=3},
+            new Room{RoomLabel="Second Floor Hallway",MainImagePath="Second-Floor-Room-Four-Image.png",CustomFloorPlanID=3},
 
-            new Room{RoomLabel="Hallway",MainImagePath="",CustomFloorPlanID=4},
-            new Room{RoomLabel="Living Room",MainImagePath="",CustomFloorPlanID=4},
-            new Room{RoomLabel="Dinning Room",MainImagePath="",CustomFloorPlanID=4},
-            new Room{RoomLabel="Kitchen",MainImagePath="",CustomFloorPlanID=4},
+            new Room{RoomLabel="Hallway",MainImagePath="Ground-Floor-Room-One-Image.png",CustomFloorPlanID=4},
+            new Room{RoomLabel="Living Room",MainImagePath="Ground-Floor-Room-Two-Image.png",CustomFloorPlanID=4},
+            new Room{RoomLabel="Dinning Room",MainImagePath="Ground-Floor-Room-Three-Image.png",CustomFloorPlanID=4},
+            new Room{RoomLabel="Kitchen",MainImagePath="Ground-Floor-Room-Four-Image.png",CustomFloorPlanID=4},
             new Room{RoomLabel="Ground Floor Toilet",MainImagePath="",CustomFloorPlanID=4},
             new Room{RoomLabel="Garden",MainImagePath="",CustomFloorPlanID=4},
-            new Room{RoomLabel="First Floor Bedroom (1) ",MainImagePath="",CustomFloorPlanID=5},
-            new Room{RoomLabel="First Floor Bedroom (2)",MainImagePath="",CustomFloorPlanID=5},
-            new Room{RoomLabel="First Floor Hallway",MainImagePath="",CustomFloorPlanID=5},
-            new Room{RoomLabel="First Floor Bathroom",MainImagePath="",CustomFloorPlanID=5},
+            new Room{RoomLabel="First Floor Bedroom (1) ",MainImagePath="First-Floor-Room-One-Image.png",CustomFloorPlanID=5},
+            new Room{RoomLabel="First Floor Bedroom (2)",MainImagePath="First-Floor-Room-Two-Image.png",CustomFloorPlanID=5},
+            new Room{RoomLabel="First Floor Hallway",MainImagePath="First-Floor-Room-Three-Image.png",CustomFloorPlanID=5},
+            new Room{RoomLabel="First Floor Bathroom",MainImagePath="First-Floor-Room-Four-Image",CustomFloorPlanID=5},
             };
             foreach (Room e in rooms)
             {

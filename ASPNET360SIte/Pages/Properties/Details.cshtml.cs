@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using ASPNET360SIte.Models; using ASPNET360SIte.Data;
+using ASPNET360SIte.Models;
+using ASPNET360SIte.Data;
 
 namespace ASPNET360SIte.Pages.Properties
 {
@@ -29,6 +30,8 @@ namespace ASPNET360SIte.Pages.Properties
 
             /*Property = await _context.Property.FirstOrDefaultAsync(m => m.ID == id);*/
             Property = await _context.Property.FirstOrDefaultAsync(m => m.ID == id);
+
+
 
             /*            Property = await _context.Property
                     .Include(s => s.FloorPlan)

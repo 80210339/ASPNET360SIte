@@ -22,7 +22,11 @@
             @Html.DisplayNameFor(model => model.Room.MainImagePath)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Room.MainImagePath)
+            @if (Model.Room.MainImagePath != null)
+            {
+
+                <img src="/uploads/@Model.Room.MainImagePath" />
+            }
         </dd>
     </dl>
 </div>

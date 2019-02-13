@@ -7,6 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ASPNET360SIte.Models; using ASPNET360SIte.Data;
 using System.IO;
+//@using Microsoft.AspNetCore.Identity
+using ASPNET360SIte.Areas.Identity.Data;
+//@inject SignInManager<ApplicationUser> SignInManager
+//@inject UserManager<ApplicationUser> UserManager
+
 
 namespace ASPNET360SIte.Pages.Properties
 {
@@ -43,6 +48,8 @@ namespace ASPNET360SIte.Pages.Properties
                 await Property.MainImage.CopyToAsync(stream);
                 Property.MainImagePath = Property.MainImage.FileName;
             }
+
+            Property.CustomAgentID = User.Identity.Name;
 
             _context.Property.Add(Property);
             await _context.SaveChangesAsync();
