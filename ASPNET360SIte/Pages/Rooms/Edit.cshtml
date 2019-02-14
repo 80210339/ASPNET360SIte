@@ -26,6 +26,18 @@
                 <span asp-validation-for="Room.MainImagePath" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Room.MainImage" class="control-label"></label>
+                <input asp-for="Room.MainImage" class="form-control" type="file" accept="image/*" />
+                <span asp-validation-for="Room.MainImage" class="text-danger"></span>
+            </div>
+            @if (Model.Room.MainImagePath != null)
+            {
+                <div class="form-group">
+                    Existing Image:
+                    <img src="/uploads/@Model.Room.MainImagePath" />
+                </div>
+            }
+            <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </form>

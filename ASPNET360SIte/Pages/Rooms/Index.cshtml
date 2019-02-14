@@ -15,6 +15,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Room[0].CustomFloorPlanID)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Room[0].RoomLabel)
             </th>
             <th>
@@ -26,6 +29,9 @@
     <tbody>
 @foreach (var item in Model.Room) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomFloorPlanID)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RoomLabel)
             </td>

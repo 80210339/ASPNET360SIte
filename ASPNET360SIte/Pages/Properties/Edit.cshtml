@@ -55,6 +55,11 @@
                 <input asp-for="Property.MainImagePath" class="form-control" />
                 <span asp-validation-for="Property.MainImagePath" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label asp-for="Property.MainImage" class="control-label"></label>
+                <input asp-for="Property.MainImage" class="form-control" type="file" accept="image/*" />
+                <span asp-validation-for="Property.MainImage" class="text-danger"></span>
+            </div>
             @if (Model.Property.MainImagePath != null)
             {
                 <div class="form-group">

@@ -19,15 +19,24 @@
                 <input asp-for="FloorPlan.FloorPlanLabel" class="form-control" />
                 <span asp-validation-for="FloorPlan.FloorPlanLabel" class="text-danger"></span>
             </div>
+            @*
             <div class="form-group">
                 <label asp-for="FloorPlan.MainImagePath" class="control-label"></label>
                 <input asp-for="FloorPlan.MainImagePath" class="form-control" />
                 <span asp-validation-for="FloorPlan.MainImagePath" class="text-danger"></span>
             </div>
+            *@
+            @*           
             <div class="form-group">
-                <label asp-for="FloorPlan.CustomPropertyID" class="control-label"></label>
-                <input asp-for="FloorPlan.CustomPropertyID" class="form-control" />
-                <span asp-validation-for="FloorPlan.CustomPropertyID" class="text-danger"></span>
+            <label asp-for="FloorPlan.CustomPropertyID" class="control-label"></label>
+            <input asp-for="FloorPlan.CustomPropertyID" class="form-control" />
+            <span asp-validation-for="FloorPlan.CustomPropertyID" class="text-danger"></span>
+            </div> 
+            *@
+            <div class="form-group">
+                <label asp-for="FloorPlan.MainImage" class="control-label"></label>
+                <input asp-for="FloorPlan.MainImage" class="form-control" type="file" accept="image/*" />
+                <span asp-validation-for="FloorPlan.MainImage" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
